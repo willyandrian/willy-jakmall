@@ -1,0 +1,73 @@
+.summary
+	&__purchased-item
+		color: #828282
+		&--big
+			padding: 15px 0
+	&__delivery-estimation
+		&--big
+			padding: 15px 0
+		&--hidden
+			visibility: hidden
+	&__chosen-delivery
+		margin-top: 5px
+		font-size: 14px
+		color: #1BD97B
+	&__payment-method
+		&--big
+			padding: 15px 0
+		&--hidden
+			visibility: hidden
+	&__chosen-method
+		margin-top: 5px
+		font-size: 14px
+		color: #1BD97B
+	&__separator
+		width: 30%
+		height: 1px
+		background-color: #D8D8D8
+		&--hidden
+			visibility: hidden
+	&__calculation
+		margin-top: 60px
+	&__calc-item
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		margin-bottom: 15px
+		&--hidden
+			display: none
+	&__calc-label
+		color: #828282
+	&__calc-label-highlight
+		font-weight: bold
+	&__calc-price
+		font-weight: bold
+	&__total
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		margin: 20px 0
+	&__total-label, &__total-number
+		font-weight: bold
+		font-size: 24px
+	&__total-label
+		color: #FF8A00
+	&__total-number
+		color: #FF8A00
+	&__pay-button
+		width: 100%
+		border: none
+		background-color: #FF8A00
+		color: white
+		padding: 20px 25px
+		box-shadow: 0px 1px 5px #FF9416
+		cursor: pointer
+		transition: transform 0.1s
+		&:hover
+			transform: translateY(2px)
+
+@media only screen and (max-width: 576px)
+/* mobile portrait or less than 576px */
+	.summary
+		&__separator
+			width: 100%

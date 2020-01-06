@@ -1,0 +1,102 @@
+$primary = #11998e
+$secondary = #38ef7d
+$white = #000
+$gray = #9b9b9b
+$lightgray = #dedede
+$error = #ff8a00
+$success = #1bd97b
+
+.delivery
+    &__input-icon-wrapper
+        border: 1px solid #CCCCCC
+        &--disabled
+            background: #dedede
+        &--success
+            border: 1px solid #1bd97b
+        &--error
+            border: 1px solid #ff8a00
+    &__input-and-icon
+        display: flex
+    &__input-wrap 
+        flex-basis: 90%
+        position: relative
+       
+        &--disabled
+            background-color: #dedede
+    &__input-text
+        font-family: inherit
+        width: 100%
+        border: 0
+        outline: 0
+        font-size: 13px
+        color: $white
+        padding: 25px 10px 13px 10px
+        background: transparent
+        transition: border-color 0.2s
+        &--no-resize
+            resize: none
+        &::placeholder 
+            color: transparent
+            display: none
+        &:placeholder-shown ~ .delivery__input-label
+            font-size: 13px
+            cursor: text
+            top: 20px
+            left: 10px
+        &:focus
+            padding-bottom: 13px;
+            & ~ ^[0]__input-label
+                position: absolute;
+                top: 10px;
+                left: 10px
+                display: block;
+                transition: 0.2s;
+                font-size: 12px;
+                color: $gray;
+                &--error
+                    color: $error
+                &--success
+                    color: $success
+    &__input-label
+        position: absolute
+        top: 10px
+        left: 10px
+        display: block
+        transition: 0.2s
+        font-size: 12px
+        color: $gray
+        &--error
+            color: $error
+        &--success
+            color: $success
+    &__input-status
+        flex-basis: 10%
+        display: flex
+        align-items: center
+        justify-content: center
+        padding: 10px
+    &__input-error-msg
+        margin-top: 10px
+
+@media only screen and (max-width: 380px)
+/* mobile portrait (small phone) */
+    .delivery
+        &__input-text
+            &:placeholder-shown ~ .delivery__input-label
+                font-size: 10px
+            &:focus
+                padding-bottom: 13px;
+                & ~ ^[0]__input-label
+                    position: absolute;
+                    top: 10px;
+                    left: 10px
+                    display: block;
+                    transition: 0.2s;
+                    font-size: 10px;
+                    color: $gray;
+                    &--error
+                        color: $error
+                    &--success
+                        color: $success
+        &__input-label
+            font-size: 10px

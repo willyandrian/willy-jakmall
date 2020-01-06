@@ -1,0 +1,55 @@
+.steps
+    font-size: 14px
+    &__list, &__item
+        display: inline-block
+    &__list
+        background: #FFFAE6
+        border-radius: 50px
+    &__item
+        color: #FF8A00
+        padding: 20px 10px
+        &--first
+            padding-left: 30px
+        &--last
+            padding-right: 30px
+    &__arrow
+        color: #FF8A00
+        font-weight: bold
+    &__badge
+        background-color: #FFE1BE
+        border-radius: 100%
+        font-size: 14px
+        color: #FF8A00
+        padding: 3px
+        &::before
+            white-space: pre
+            content: " "
+        &::after
+            white-space: pre
+            content: " "
+        &--finished
+            background-color: #FF8A00
+            color: #ffffff
+            
+@media only screen and (max-width: 576px)
+/* mobile portrait or less than 576px */
+    .steps
+        &__list
+            padding: 5px 10px
+        &__item
+            padding: 20px 3px
+@media only screen and (max-width: 380px)
+/* mobile portrait (small phone) */
+    .steps
+        &__item
+            font-size: 15px
+            padding: 13px 40px
+        &__badge
+            padding: 1px
+        &__item
+            display: none
+            &--active
+                display: block
+
+
+    
